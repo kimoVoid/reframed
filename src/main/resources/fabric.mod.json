@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "reframed",
+	"version": "${version}",
+	"name": "Reframed",
+	"description": "Replaces outdated AWT frame with modern LWJGL 3.",
+	"authors": [
+		"All the LWJGL 2 and 3 people!",
+		"gudenau",
+		"Zarzelcow",
+		"moehreag",
+		"Slainlight",
+		"DanyGames2014",
+		"kimoVoid"
+	],
+	"license": "MIT",
+	"icon": "assets/reframed/icon.png",
+	"environment": "client",
+	"mixins": [
+		"reframed.mixins.json"
+	],
+	"accessWidener": "reframed.accesswidener",
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "<=1.5.2"
+	}
+}

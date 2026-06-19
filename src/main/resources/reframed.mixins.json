@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.kimovoid.reframed.mixin",
+  "plugin": "me.kimovoid.reframed.lwjgl3compat.Lwjgl3MixinPostProcessor",
+  "compatibilityLevel": "JAVA_17",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "MinecraftAppletMixin",
+    "MinecraftMixin",
+    "MouseHelperMixin",
+    "lwjgl3.LibraryLWJGLOpenALMixin",
+    "lwjgl3.MixinMinecraftDrawVirtualCursor",
+    "lwjgl3.MixinScreenFixClipboard",
+    "lwjgl3.AL10Mixin",
+    "lwjgl3.ALMixin",
+    "lwjgl3.ARBOcclusionQueryMixin",
+    "lwjgl3.ARBShaderObjectsMixin",
+    "lwjgl3.GL11Mixin",
+    "lwjgl3.GL20Mixin",
+    "lwjgl3.GLCapabilitiesMixin"
+  ]
+}
