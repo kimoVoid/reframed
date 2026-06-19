@@ -23,3 +23,21 @@ You need to grab the Ornithe b1.7.3 gen2 instance from here:
 <br>🔗 https://ornithemc.net/ornithe-installer-rs/?prism&minecraft-version=b1.7.3&gen=2
 
 After that, just place the mod in the mods folder and remember to set the right Java version.
+
+## Developers
+You can add Reframed to your dev environment like this:
+- Add the repository:
+```
+maven { url = "https://kimovoid.github.io/repository" }
+```
+- Add the runtime dependency:
+```
+modRuntimeOnly "me.kimovoid:reframed:${project.reframed_version}"
+```
+(`reframed_version` should be the latest version, currently `1.0.0+b1.7.3`)
+- Add the configuration to exclude LWJGL:
+```
+configurations.matching { it.name.toLowerCase().contains('runtime') }.configureEach {
+	exclude group: 'org.lwjgl.lwjgl'
+}
+```
