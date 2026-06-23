@@ -28,27 +28,18 @@ public class MinecraftMixin {
             )
     )
     private void setupDisplay(CallbackInfo ci) {
-        ByteBuffer[] icons = new ByteBuffer[4];
-
-        try {
-            icons[0] = loadIcon("/assets/reframed/icons/16.png");
-            icons[1] = loadIcon("/assets/reframed/icons/32.png");
-            icons[2] = loadIcon("/assets/reframed/icons/64.png");
-            icons[3] = loadIcon("/assets/reframed/icons/256.png");
-        } catch (Exception ignored) {}
-
-        if (icons[0] != null
-                && icons[1] != null
-                && icons[2] != null
-                && icons[3] != null) {
-            Display.setIcon(icons);
-        }
+        this.applyIcons();
 
         if (Display.getTitle().contains("Minecraft Minecraft")) {
             Display.setTitle(Display.getTitle().replaceFirst("Minecraft ", ""));
         }
 
         Display.setResizable(true);
+    }
+
+    @Inject(method = "init", at = @At("TAIL"))
+    private void lateSetupIcons(CallbackInfo ci) {
+        this.applyIcons(); // windows is a lovely OS
     }
 
     @Redirect(
@@ -66,6 +57,25 @@ public class MinecraftMixin {
     @Inject(method = "initLicenseCheckThread", at = @At("HEAD"), cancellable = true)
     private void killHttpRequestToDeadUrl(CallbackInfo ci) {
         ci.cancel();
+    }
+
+    @Unique
+    private void applyIcons() {
+        ByteBuffer[] icons = new ByteBuffer[4];
+
+        try {
+            icons[0] = loadIcon("/assets/reframed/icons/16.png");
+            icons[1] = loadIcon("/assets/reframed/icons/32.png");
+            icons[2] = loadIcon("/assets/reframed/icons/64.png");
+            icons[3] = loadIcon("/assets/reframed/icons/256.png");
+        } catch (Exception ignored) {}
+
+        if (icons[0] != null
+                && icons[1] != null
+                && icons[2] != null
+                && icons[3] != null) {
+            Display.setIcon(icons);
+        }
     }
 
     @Unique
