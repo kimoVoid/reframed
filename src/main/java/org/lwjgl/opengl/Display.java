@@ -8,9 +8,9 @@ import java.nio.file.StandardCopyOption;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import me.kimovoid.reframed.lwjgl3compat.DesktopFileInjector;
-import me.kimovoid.reframed.lwjgl3compat.wayland.WaylandCenterCursor;
-import me.kimovoid.reframed.lwjgl3compat.util.OS;
+import io.github.kimovoid.reframed.lwjgl3compat.DesktopFileInjector;
+import io.github.kimovoid.reframed.lwjgl3compat.wayland.WaylandCenterCursor;
+import io.github.kimovoid.reframed.lwjgl3compat.util.OS;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.lwjgl.LWJGLException;

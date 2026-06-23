@@ -1,8 +1,8 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.kimovoid.reframed.mixin",
-  "plugin": "me.kimovoid.reframed.lwjgl3compat.Lwjgl3MixinPostProcessor",
+  "package": "io.github.kimovoid.reframed.mixin",
+  "plugin": "io.github.kimovoid.reframed.lwjgl3compat.Lwjgl3MixinPostProcessor",
   "compatibilityLevel": "JAVA_17",
   "injectors": {
     "defaultRequire": 1

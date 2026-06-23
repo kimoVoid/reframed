@@ -35,9 +35,9 @@ import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.Sys;
 import org.lwjgl.glfw.GLFW;
-import me.kimovoid.reframed.lwjgl3compat.implementation.LWJGLImplementationUtils;
+import io.github.kimovoid.reframed.lwjgl3compat.implementation.LWJGLImplementationUtils;
 import org.lwjgl.opengl.Display;
-import me.kimovoid.reframed.lwjgl3compat.implementation.input.InputImplementation;
+import io.github.kimovoid.reframed.lwjgl3compat.implementation.input.InputImplementation;
 
 import java.nio.ByteBuffer;
 import java.util.HashMap;

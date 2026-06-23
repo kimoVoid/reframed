@@ -32,9 +32,9 @@ maven { url = "https://kimovoid.github.io/repository" }
 ```
 - Add the runtime dependency:
 ```
-modRuntimeOnly "me.kimovoid:reframed:${project.reframed_version}"
+modRuntimeOnly "io.github.kimovoid:reframed:${project.reframed_version}"
 ```
-(`reframed_version` should be the latest version, currently `1.0.0+b1.7.3`)
+(`reframed_version` should be the latest version, currently `1.0.1+b1.7.3`)
 - Add the configuration to exclude LWJGL:
 ```
 configurations.matching { it.name.toLowerCase().contains('runtime') }.configureEach {

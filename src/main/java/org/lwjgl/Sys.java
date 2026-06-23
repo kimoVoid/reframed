@@ -31,7 +31,7 @@
  */
 package org.lwjgl;
 
-import me.kimovoid.reframed.lwjgl3compat.util.OS;
+import io.github.kimovoid.reframed.lwjgl3compat.util.OS;
 
 /**
  * Created by gudenau on 5/30/2017.
